@@ -8,10 +8,10 @@ import { Injectable } from '@angular/core';
 export class BEConnectionService {
   constructor(private http: HttpClient) {}
 
-  private url = 'https://localhost:7018/Test/Get';
+  private url = 'https://localhost:7018/todo/CreateNewTodoItem';
 
-  getData(): Observable<any> {
-    return this.http.get(this.url, {
+  createNewTodoItem(todoItem: any): Observable<any> {
+    return this.http.post(this.url, todoItem, {
       responseType: 'text',
     });
   }

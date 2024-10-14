@@ -11,4 +11,14 @@ import { BEConnectionService } from '../services/beConnectionService.service';
 })
 export class AppComponent {
   constructor(private beConnectionService: BEConnectionService) {}
+
+
+  createNewItem() {
+    debugger
+    this.beConnectionService.createNewTodoItem({
+      title: 'New Item',
+      description: 'New Description',
+      isDone: false,
+    });
+  }
 }
