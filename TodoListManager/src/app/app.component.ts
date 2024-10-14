@@ -9,12 +9,6 @@ import { BEConnectionService } from '../services/beConnectionService.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(private beConnectionService: BEConnectionService) {}
-
-  ngOnInit(): void {
-    this.beConnectionService.getData().subscribe((data) => {
-      console.log(data);
-    });
-  }
 }

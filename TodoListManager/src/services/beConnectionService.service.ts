@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class BEConnectionService {
   constructor(private http: HttpClient) {}
 
-  private url = 'https://localhost:7018/test/testGet';
+  private url = 'https://localhost:7018/Test/Get';
 
   getData(): Observable<any> {
     return this.http.get(this.url, {
